@@ -1,5 +1,10 @@
 #!/bin/bash
 
+###### Setup ######
+# install this file under /root/backup.sh
+# chmod 700 /root/backup.sh
+# crontab -e -> 0 2 * * * /root/backup.sh >/dev/null 2>&1
+
 ###### Your config here ######
 BUCKET='b2:server-SERVERname'
 FOLDER='/home/$$$'
