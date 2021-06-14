@@ -12,7 +12,7 @@ export RESTIC_PASSWORD="$$$"
 
 ###### Don't touch ######
 export RESTIC_REPOSITORY=$BUCKET
-#sudo apt --only-upgrade install resic
+sudo apt --only-upgrade install resic
 restic -r $BUCKET init
 mysqldump  -u$MYSQLUSER -p$MYSQLPASS --all-databases >$FOLDER/all_dump.sql
 restic -r $BUCKET backup $FOLDER
