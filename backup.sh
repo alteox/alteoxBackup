@@ -19,6 +19,7 @@ export RESTIC_PASSWORD="$$$"
 export RESTIC_REPOSITORY=$BUCKET
 sudo apt --only-upgrade install resic
 restic -r $BUCKET init
+restic unlock -r $BUCKETy
 mysqldump  -u$MYSQLUSER -p$MYSQLPASS --all-databases >$FOLDER/all_dump.sql
 restic -r $BUCKET backup $FOLDER
 restic -r $BUCKET forget --keep-last $DAYS --prune
